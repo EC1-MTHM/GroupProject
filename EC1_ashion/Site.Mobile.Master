@@ -1,0 +1,262 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.Mobile.master.cs" Inherits="EC1_ashion.Site_Mobile" %>
+
+<%@ Register Src="~/ViewSwitcher.ascx" TagPrefix="friendlyUrls" TagName="ViewSwitcher" %>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Ashion" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+    <title><%: Page.Title %> Ashion </title>
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Cookie&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+
+    <!-- -->
+    <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+
+    <!--Main Css-->
+    <link rel="stylesheet" href="Content/main-css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="Content/main-css/font-awesome.min.css" type="text/css" />
+    <link rel="stylesheet" href="Content/main-css/elegant-icons.css" type="text/css" />
+    <link rel="stylesheet" href="Content/main-css/jquery-ui.min.css" type="text/css" />
+    <link rel="stylesheet" href="Content/main-css/magnific-popup.css" type="text/css" />
+    <link rel="stylesheet" href="Content/main-css/owl.carousel.min.css" type="text/css" />
+    <link rel="stylesheet" href="Content/main-css/slicknav.min.css" type="text/css" />
+    <link rel="stylesheet" href="Content/main-css/style.css" type="text/css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+
+    <asp:ContentPlaceHolder runat="server" ID="HeadContent" />
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div class="offcanvas-menu-overlay"></div>
+        <div class="offcanvas-menu-wrapper">
+            <div class="offcanvas__close">+</div>
+            <ul class="offcanvas__widget">
+                <li><span class="icon_search search-switch"></span></li>
+                <li><a href="#"><span class="icon_heart_alt"></span>
+                    <div class="tip"></div>
+                </a></li>
+                <li><a href="#"><span class="icon_bag_alt"></span>
+                    <div class="tip"></div>
+                </a></li>
+            </ul>
+            <div class="offcanvas__logo">
+                <a href="default.aspx">
+                    <img src="img/logo.png" alt="" /></a>
+            </div>
+            <div id="mobile-menu-wrap"></div>
+            <div class="offcanvas__auth">
+                <a href="#">Login</a>
+                <a href="#">Register</a>
+            </div>
+        </div>
+
+        <header class="header">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-xl-3 col-lg-2">
+                        <div class="header__logo">
+                            <a href="Default.aspx">
+                                <img src="img/logo.png" alt="" /></a>
+                        </div>
+                    </div>
+                    <div class="col-xl-6 col-lg-7">
+                        <nav class="header__menu">
+                            <ul>
+                                <li><a href="Default.aspx">Home</a></li>
+                                <li><a href="ProductList.aspx?id=1">Women’s</a></li>
+                                <li><a href="ProductList.aspx?id=2">Men’s</a></li>
+                                <li><a href="ProductList.aspx">Shop</a></li>
+                                <li><a href="#">Blog</a></li>
+                                <li><a href="About.aspx">About Us</a></li>
+                                <li><a href="Contact.aspx">Contact</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                    <div class="col-lg-3">
+                        <div class="header__right">
+                            <div class="header__right__auth">
+                                <a href="#">Login</a>
+                                <a href="#">Register</a>
+                            </div>
+                            <ul class="header__right__widget">
+                                <li><span class="fa fa-search"></span></li>
+                                <li><a href="#"><span class="fa fa-heart-o"></span>
+                                    <div class="tip"></div>
+                                    <!--fav-->
+                                </a></li>
+                                <li><a href="#"><span class="fa fa-shopping-bag"></span>
+                                    <div class="tip"></div>
+                                    <!--shopping cart-->
+                                </a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="canvas__open">
+                    <i class="fa fa-bars"></i>
+                </div>
+            </div>
+        </header>
+
+        <asp:ContentPlaceHolder runat="server" ID="FeaturedContent" />
+        <section class="content-wrapper main-content clear-fix">
+            <asp:ContentPlaceHolder runat="server" ID="MainContent" />
+        </section>
+
+        <!-- Socail Meadia Begin -->
+        <div class="Smedia">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-2 col-md-4 col-sm-4 p-0">
+                        <div class="Smedia__item set-bg" data-setbg="img/Social/fb.jpg">
+                            <div class="Smedia__text">
+                                <i class="fa fa-facebook" style="color: blue"></i>
+                                <a href="#">@ ashion_shop</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-2 col-md-4 col-sm-4 p-0">
+                        <div class="Smedia__item set-bg" data-setbg="img/instagram/insta.jpg">
+                            <div class="Smedia__text">
+                                <i class="fa fa-Social"></i>
+                                <a href="#">@ ashion_shop</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-2 col-md-4 col-sm-4 p-0">
+                        <div class="Smedia__item set-bg" data-setbg="img/Social/pin.jpg">
+                            <div class="Smedia__text">
+                                <i class="fa fa-pinterest" style="color: red"></i>
+                                <a href="#">@ ashion_shop</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-2 col-md-4 col-sm-4 p-0">
+                        <div class="Smedia__item set-bg" data-setbg="img/Social/tweet.jpg">
+                            <div class="Smedia__text">
+                                <i class="fa fa-twitter" style="color: deepskyblue"></i>
+                                <a href="#">@ ashion_shop</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-2 col-md-4 col-sm-4 p-0">
+                        <div class="Smedia__item set-bg" data-setbg="img/Social/utube.jpg">
+                            <div class="Smedia__text">
+                                <i class="fa fa-youtube-play" style="color: red"></i>
+                                <a href="#">@ ashion_shop</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-2 col-md-4 col-sm-4 p-0">
+                        <div class="Smedia__item set-bg" data-setbg="img/Social/Wapp.jpg">
+                            <div class="Smedia__text">
+                                <i class="fa fa-whatsapp" style="color: forestgreen"></i>
+                                <a href="#">+ 876-ASH-ION1</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Social Media End -->
+
+        <!-- Footer Section Begin -->
+        <div class="footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-4 col-md-6 col-sm-7">
+                        <div class="footer__about">
+                            <div class="footer__logo">
+                                <a href="Default.aspx">
+                                    <img src="img/logo.png" alt="" /></a>
+                            </div>
+                            <p>         Something                 </p>
+                            <div class="footer__payment">
+                                <a href="#">
+                                    <img src="img/payment/payment-1.png" alt="" /></a>
+                                <a href="#">
+                                    <img src="img/payment/payment-2.png" alt="" /></a>
+                                <a href="#">
+                                    <img src="img/payment/payment-3.png" alt="" /></a>
+                                <a href="#">
+                                    <img src="img/payment/payment-4.png" alt="" /></a>
+                                <a href="#">
+                                    <img src="img/payment/payment-5.png" alt="" /></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-2 col-md-3 col-sm-5">
+                        <div class="footer__widget">
+                            <h6>Quick links</h6>
+                            <ul>
+                                <li><a href="About.aspx">About</a></li>
+                                <li><a href="#">Blogs</a></li>
+                                <li><a href="Contact.aspx">Contact</a></li>
+                                <li><a href="#">FAQ</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-2 col-md-3 col-sm-4">
+                        <div class="footer__widget">
+                            <h6>Account</h6>
+                            <ul>
+                                <li><a href="#">My Account</a></li>
+                                <li><a href="#">Orders Tracking</a></li>
+                                <li><a href="#">Checkout</a></li>
+                                <li><a href="#">Wishlist</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-8 col-sm-8">
+                        <div class="footer__newslatter">
+                            <h6>NEWSLETTER</h6>
+                            <form action="#">
+                                <asp:TextBox type="text" runat="server" placeholder="Email"></asp:TextBox>
+                                <asp:Button type="submit" runat="server" class="site-btn" Text="Subscribe"></asp:Button>
+                            </form>
+                            <div class="footer__social">
+                                <a href="facebook.com"><i class="fa fa-facebook"></i></a>
+                                <a href="twitter.com"><i class="fa fa-twitter"></i></a>
+                                <a href="youtube.com"><i class="fa fa-youtube-play"></i></a>
+                                <a href="instagram.com"><i class="fa fa-instagram"></i></a>
+                                <a href="pinterest.com"><i class="fa fa-pinterest"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Footer Section End -->
+        <hr />
+        <footer>
+            <p>&copy; <%: DateTime.Now.Year %> - My ASP.NET Application</p>
+        </footer>
+        <!--fix form search-->
+        <div class="search-model">
+            <div class="h-100 d-flex align-items-center justify-content-center">
+                <div class="search-close-switch">+</div>
+                <form class="search-model-form">
+                    <input type="text" id="search-input" placeholder="Search here.....">
+                </form>
+            </div>
+        </div>
+        <friendlyUrls:ViewSwitcher runat="server" />
+    </form>
+    <script src="Scripts/main-js/jquery-3.3.1.min.js"></script>
+    <script src="Scripts/main-js/bootstrap.min.js"></script>
+    <script src="Scripts/main-js/jquery.magnific-popup.min.js"></script>
+    <script src="Scripts/main-js/jquery-ui.min.js"></script>
+    <script src="Scripts/main-js/mixitup.min.js"></script>
+    <script src="Scripts/main-js/jquery.countdown.min.js"></script>
+    <script src="Scripts/main-js/jquery.slicknav.js"></script>
+    <script src="Scripts/main-js/owl.carousel.min.js"></script>
+    <script src="Scripts/main-js/jquery.nicescroll.min.js"></script>
+    <script src="Scripts/main-js/main.js"></script>
+</body>
+</html>
